@@ -1,0 +1,6 @@
+<h1>Edit Form</h1>
+<%= form_for @coupon do |f| %>
+Code: <%= f.text_field :coupon_code %>
+Store: <%= f.text_field :store %>
+<%= f.submit %>
+<% end %>
