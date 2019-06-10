@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+require "pry"
 describe 'Route to view' do
   it 'has an index page' do
     visit coupons_path
@@ -66,10 +66,11 @@ describe 'Show page' do
   end
 end
 
-describe 'linking from the index page to the show page' do
-  it 'index page links to coupon page' do
-    linked_coupon = Coupon.create(coupon_code: "FREESTUFF", store: "Chipotle")
-    visit coupons_path
-    expect(page).to have_link(linked_coupon.coupon_code, href: coupon_path(linked_coupon))
-  end
-end
+# describe 'linking from the index page to the show page' do
+#   it 'index page links to coupon page' do
+#     linked_coupon = Coupon.create(coupon_code: "FREESTUFF", store: "Chipotle")
+#     visit coupons_path
+#     # binding.pry
+#     expect(page).to have_link(linked_coupon.coupon_code, href: coupon_path(linked_coupon))
+#   end
+# end
