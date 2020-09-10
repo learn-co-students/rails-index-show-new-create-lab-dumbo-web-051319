@@ -1,0 +1,8 @@
+ <h1>YEEYEY</h1>
+<ol type="1">
+ <% @coupons.each do |coupon| %>
+    <li>Code: <%= link_to coupon.coupon_code, coupon %> - Store: <%= coupon.store %></li>
+ <% end %>
+
+ </ul>
+
